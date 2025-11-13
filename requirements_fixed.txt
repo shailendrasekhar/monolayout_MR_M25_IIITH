@@ -1,0 +1,66 @@
+# MonoLayout Requirements - Python 3.7 Compatible
+# All packages from original requirements.txt with updated working versions
+# Successfully tested and installed versions
+# Last updated: 13 November 2025
+
+# Core Deep Learning - NOTE: Original had "pytorch" which doesn't exist, use "torch"
+torch==1.6.0
+torchvision==0.7.0
+
+# Computer Vision
+opencv-python==4.12.0.88
+Pillow==9.5.0
+
+# Data Processing
+pandas==1.3.5
+numpy==1.21.6
+scipy==1.7.3
+
+# Machine Learning
+scikit-image==0.19.3
+scikit-learn==1.0.2
+
+# Visualization
+seaborn==0.12.2
+matplotlib==3.5.3
+
+# Utilities
+tqdm==4.67.1
+pykitti==0.3.1
+six==1.17.0
+sympy==1.10.1
+
+# NOTE: The following packages from original requirements.txt are NOT installed
+# as they are either incompatible with Python 3.7 or unnecessary for MonoLayout:
+# 
+# pptk==0.1.0                    # Point cloud visualization (optional)
+# protobuf==3.10.0               # Only needed if using TensorFlow
+# SecretStorage==2.3.1           # Linux keyring access (not needed)
+# Send2Trash==1.5.0              # Send files to trash (not needed)
+# service-identity==16.0.0       # Twisted service identity (not needed)
+# simplegeneric==0.8.1           # Deprecated, use functools.singledispatch
+# simplejson==3.13.2             # Standard json module is sufficient
+# singledispatch==3.4.0.3        # Built into Python 3.7+
+# sklearn==0.0                   # Dummy package, use scikit-learn instead
+# subprocess32==3.5.4            # Python 2 backport, not needed for Python 3.7
+# tensorboard==1.14.0            # Optional, only if using TensorFlow
+# tensorflow==1.15.4             # Optional, not required for inference
+# tensorflow-estimator==1.14.0  # Optional, only if using TensorFlow
+
+# If you need TensorFlow for training comparisons, uncomment these:
+# tensorflow==1.15.4
+# tensorflow-estimator==1.14.0
+# tensorboard==1.14.0
+# protobuf==3.10.0
+
+# Auto-installed dependencies (no need to specify):
+# PyWavelets==1.3.0
+# networkx==2.6.3
+# imageio==2.31.2
+# joblib==1.3.2
+# threadpoolctl==3.1.0
+# future==1.0.0
+# python-dateutil==2.9.0.post0
+# pytz==2025.2
+# typing_extensions==4.7.1
+# mpmath==1.3.0
