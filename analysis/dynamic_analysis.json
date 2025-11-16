@@ -1,0 +1,140 @@
+{
+  "total_images": 13,
+  "avg_occupied_percentage": 0.9846613957331731,
+  "std_occupied_percentage": 1.0918670379218467,
+  "min_occupied_percentage": 0.0,
+  "max_occupied_percentage": 4.49371337890625,
+  "median_occupied_percentage": 0.811767578125,
+  "results": [
+    {
+      "file": "ring_front_center_315978406132759976.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 0,
+      "occupied_percentage": 0.0,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978407597951688.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 480,
+      "occupied_percentage": 0.732421875,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978407697850968.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 785,
+      "occupied_percentage": 1.19781494140625,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978407964251576.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 586,
+      "occupied_percentage": 0.8941650390625,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978408097452560.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 660,
+      "occupied_percentage": 1.007080078125,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978408297253928.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 532,
+      "occupied_percentage": 0.811767578125,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978411760456696.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 2945,
+      "occupied_percentage": 4.49371337890625,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978415190355768.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 403,
+      "occupied_percentage": 0.61492919921875,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978416089456248.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 563,
+      "occupied_percentage": 0.85906982421875,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978416122756264.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 519,
+      "occupied_percentage": 0.79193115234375,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978418054156112.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 858,
+      "occupied_percentage": 1.3092041015625,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978419585956832.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 58,
+      "occupied_percentage": 0.0885009765625,
+      "shape": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "ring_front_center_315978421550657352.png",
+      "total_pixels": 65536,
+      "occupied_pixels": 0,
+      "occupied_percentage": 0.0,
+      "shape": [
+        256,
+        256
+      ]
+    }
+  ]
+}

@@ -49,7 +49,9 @@ def save_topview(idx, tv, name_dest_im):
 
 def test(args):
     models = {}
-    device = torch.device("cuda")
+    # Use CPU to avoid CUDA compatibility issues with newer GPUs
+    device = torch.device("cpu")
+    print(f"Using device: {device}")
     encoder_path = os.path.join(args.model_path, "encoder.pth")
     encoder_dict = torch.load(encoder_path, map_location=device)
     feed_height = encoder_dict["height"]
