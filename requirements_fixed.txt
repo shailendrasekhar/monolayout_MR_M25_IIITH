@@ -4,7 +4,7 @@
 # Last updated: 13 November 2025
 
 # Core Deep Learning - NOTE: Original had "pytorch" which doesn't exist, use "torch"
-torch==1.6.0
+torch==1.6
 torchvision==0.7.0
 
 # Computer Vision

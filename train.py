@@ -35,6 +35,7 @@ def get_args():
         type=str,
         choices=[
             "argo",
+            "argo2",
             "3Dobject",
             "odometry",
             "raw"],
@@ -157,6 +158,7 @@ class Trainer:
         dataset_dict = {"3Dobject": monolayout.KITTIObject,
                         "odometry": monolayout.KITTIOdometry,
                         "argo": monolayout.Argoverse,
+                        "argo2": monolayout.ArgoverseV2,
                         "raw": monolayout.KITTIRAW}
 
         self.dataset = dataset_dict[self.opt.split]

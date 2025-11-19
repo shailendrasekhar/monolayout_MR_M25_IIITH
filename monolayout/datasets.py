@@ -299,4 +299,82 @@ class Argoverse(MonoDataset):
         return path
 
     def get_dynamic_gt_path(self, root_dir, frame_index):
-        return self.get_dynamic_path(self, root_dir, frame_index)
+        return self.get_dynamic_path(root_dir, frame_index)
+
+
+class ArgoverseV2(MonoDataset):
+    """Argoverse 2 dataset class for MonoLayout."""
+    
+    def __init__(self, *args, **kwargs):
+        super(ArgoverseV2, self).__init__(*args, **kwargs)
+        self.root_dir = "./data/argoverse2"
+        self.camera_name = "ring_front_center"
+    
+    def get_image_path(self, root_dir, frame_index):
+        """Get image path for Argoverse 2 format."""
+        if isinstance(frame_index, str) and '/' in frame_index:
+            log_id, timestamp_ns = frame_index.split('/', 1)
+        else:
+            # Handle legacy format
+            parts = str(frame_index).split('/')
+            log_id = parts[0] if len(parts) > 1 else frame_index
+            if len(parts) > 2:
+                filename = parts[-1]
+                timestamp_ns = filename.replace(f"{self.camera_name}_", "").replace(".png", "").replace(".jpg", "")
+            else:
+                timestamp_ns = frame_index
+        
+        img_path = os.path.join(
+            root_dir, log_id, "sensors", "cameras", 
+            self.camera_name, f"{timestamp_ns}.jpg"
+        )
+        return img_path
+    
+    def get_static_path(self, root_dir, frame_index):
+        """Get static (road) layout path."""
+        if isinstance(frame_index, str) and '/' in frame_index:
+            log_id, timestamp_ns = frame_index.split('/', 1)
+        else:
+            parts = str(frame_index).split('/')
+            log_id = parts[0] if len(parts) > 1 else frame_index
+            timestamp_ns = parts[-1] if len(parts) > 1 else frame_index
+        
+        path = os.path.join(
+            root_dir, log_id, "road_bev", 
+            f"{self.camera_name}_{timestamp_ns}.png"
+        )
+        return path
+    
+    def get_dynamic_path(self, root_dir, frame_index):
+        """Get dynamic (vehicle) layout path."""
+        if isinstance(frame_index, str) and '/' in frame_index:
+            log_id, timestamp_ns = frame_index.split('/', 1)
+        else:
+            parts = str(frame_index).split('/')
+            log_id = parts[0] if len(parts) > 1 else frame_index
+            timestamp_ns = parts[-1] if len(parts) > 1 else frame_index
+        
+        path = os.path.join(
+            root_dir, log_id, "car_bev_gt", 
+            f"{self.camera_name}_{timestamp_ns}.jpg"
+        )
+        return path
+    
+    def get_static_gt_path(self, root_dir, frame_index):
+        """Get static ground truth path."""
+        if isinstance(frame_index, str) and '/' in frame_index:
+            log_id, timestamp_ns = frame_index.split('/', 1)
+        else:
+            parts = str(frame_index).split('/')
+            log_id = parts[0] if len(parts) > 1 else frame_index
+            timestamp_ns = parts[-1] if len(parts) > 1 else frame_index
+        
+        path = os.path.join(
+            root_dir, log_id, "road_gt", 
+            f"{self.camera_name}_{timestamp_ns}.png"
+        )
+        return path
+    
+    def get_dynamic_gt_path(self, root_dir, frame_index):
+        """Get dynamic ground truth path."""
+        return self.get_dynamic_path(root_dir, frame_index)
